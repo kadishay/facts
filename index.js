@@ -15,5 +15,3 @@ async function main() {
   console.log(completion.choices[0]);
 }
 main();
-
-
