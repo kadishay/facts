@@ -39,4 +39,4 @@ app.post("/", async function (request, response) {
     }
 });
 
-app.listen(port, () => console.log("Server running!!!"));
+app.listen(port, () => console.log("Server running!!! on: ", port));
