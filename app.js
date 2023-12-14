@@ -11,6 +11,8 @@ const openai = new OpenAI({
 	apiKey: process.env.OPENAI_SECRET_KEY
 });
 
+var port = process.env.PORT || 3000;
+
 var app = express();
 app.use(express.json()) 
 app.get("/", (request, response) => {
@@ -37,4 +39,4 @@ app.post("/", async function (request, response) {
     }
 });
 
-app.listen(3000, () => console.log("Server running!!!"));
+app.listen(port, () => console.log("Server running!!! on port: " + port));

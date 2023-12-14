@@ -17,6 +17,6 @@ sudo ssh -i "fc.pem" ec2-user@ec2-54-166-206-77.compute-1.amazonaws.com
 4. Re-run the application
 ```
 cd app
-nodemon server.js
+nodemon app.js
 ```
 5. Open browser - http://ec2-54-166-206-77.compute-1.amazonaws.com:3000/
