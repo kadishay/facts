@@ -42,23 +42,24 @@
 
     .button {
         position: absolute;
-        margin-top: -51px;
-        right: 23%;
-        width: 30px;
-        height: 30px;
-        border: 2px solid #272325;
-        border-radius: 50%;
-        text-align: center;
+        left: calc(50% - 60px);
+        width: 120px;
+        height: 40px;
+        border: 2px solid #6b6b6b;
+        border-radius: 25px;
         vertical-align: middle;
-        line-height: 27px;
+        line-height: 40px;
         font-size: 25px;
         cursor: pointer;
         color: #272325;
+        text-align: center;
+        margin-top: 20px;
+        background-color: white;
     }
 
     .fact {
         min-height: 100px;
-        padding: 30px 28%;
+        padding: 85px 28%;
         line-height: 34px;
         font-size: 21px;
         color: whitesmoke;
@@ -85,8 +86,8 @@
         width: 80px;
         height: 80px;
         position: absolute;
-        left: 47%;
-        top: 310px;
+        left: calc(50% - 40px);
+        top: 330px;
         display: none;
     }
 
@@ -170,23 +171,28 @@
     }
 
     @media only screen and (max-width: 600px) {
+      h1 {
+        margin-top: 30px;
+      }
+
       input {
-            width: 75%;
-            margin: 0px 3%;
-            font-size: 15px;
-        }
-        .button {
-            right: 10%;
-            margin-top: -47px;
-        }
-        .fact {
-            padding: 30px 7%;
-            line-height: 28px;
-            font-size: 15px;
-        }
-        .lds-roller {
-            left: 38%;
-        }
+        width: 75%;
+        margin: -10px 4%;
+        font-size: 15px;
+      }
+      .button {
+        left: calc(50% - 70px);
+        margin-top: 20px;
+      }
+      .fact {
+        padding: 70px 7% 20px;
+        line-height: 28px;
+        font-size: 15px;
+      }
+      .lds-roller {
+        left: calc(50% - 45px);
+        top: 280px;
+      }
 
   </style>
   <script>
@@ -214,8 +220,8 @@
 
 <body>
   <h1 class="title">Fact Checker</h1>
-  <input placeholder="Theory..." class="theory" onkeypress="handle(event)"></input>
-  <div class="button" onclick="handle(event)"> > </div>
+  <input placeholder="Paste text to be reviewed here and click “really?”" class="theory" onkeypress="handle(event)"></input>
+  <div class="button" onclick="handle(event)"> Really? </div>
   <div class="fact"></div>
 
   <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
