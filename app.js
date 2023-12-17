@@ -11,7 +11,7 @@ const openai = new OpenAI({
 	apiKey: process.env.OPENAI_SECRET_KEY
 });
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 5000;
 
 var app = express();
 app.use(express.json()) 
