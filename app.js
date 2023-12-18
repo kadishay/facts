@@ -16,11 +16,13 @@ var port = process.env.PORT || 8080;
 
 var app = express();
 app.use(express.json()) 
+app.use(cors());
+
 app.get("/", (request, response) => {
     response.sendFile('./index.html', {root: __dirname })
 });
 
-app.post("/", cors(), async function (request, response) {
+app.post("/", async function (request, response) {
     try {
         console.log("\nTheory: " + request.body.theory)
 
