@@ -1,6 +1,7 @@
 import OpenAI from "openai";
 import 'dotenv/config';
 import express from 'express';
+import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -19,7 +20,7 @@ app.get("/", (request, response) => {
     response.sendFile('./index.html', {root: __dirname })
 });
 
-app.post("/", async function (request, response) {
+app.post("/", cors(), async function (request, response) {
     try {
         console.log("\nTheory: " + request.body.theory)
 
